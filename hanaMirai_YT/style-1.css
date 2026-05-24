@@ -1,0 +1,315 @@
+:root {
+    --soft-pink: #fbbfd4;
+    --candy-pink: #e22b71;
+    --beige: #f4f8de;
+}
+
+* {
+    margin: 0; padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize; /* biar tulisan huruf kapital di awal kata */
+    transition: .2 linear;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    background: #fddde9;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 2rem 9%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header a {
+    font-size: 2rem;
+    color: #333;
+    padding: 0 1.5rem;
+}
+
+header a:hover {
+    color: var(--candy-pink);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* lirik */
+.lirik-container {
+    margin-top: 10rem;
+    margin-left: 2rem;
+}
+
+.lirik { 
+    display: none; 
+}
+
+.lirik.active { 
+    display: block;
+}
+
+.lirik-container .lirik h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--candy-pink);
+}
+
+.lirik-container .lirik h2::after {
+    content: "";
+    border-bottom: .6rem solid #7eb039;
+    border-radius: .2rem;
+    width: 15rem;
+    display: block;
+    margin: 1rem auto;
+}
+
+.lirik-container .lirik h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.lirik-container .lirik p {
+    font-size: 1.5rem;
+    color: #333;
+    padding-top: 1rem;
+    text-transform: none;
+}
+
+.lirik-container .deskripsi {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.lirik-container .deskripsi p {
+    width: 100rem;
+    text-transform: none;
+}
+
+.lirik-container .deskripsi span {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* story */
+.story-container {
+    margin-top: 10rem;
+    margin-left: 2rem;
+}
+
+.story { 
+    display: none; 
+}
+
+.story.active { 
+    display: block;
+}
+
+.story-container .story h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--candy-pink);
+}
+
+.story-container .story h2::after {
+    content: "";
+    border-bottom: .6rem solid #7eb039;
+    border-radius: .2rem;
+    width: 15rem;
+    display: block;
+    margin: 1rem auto;
+}
+
+.story-container .story h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.story-container .story p {
+    font-size: 1.5rem;
+    color: #333;
+    padding-top: 1rem;
+    text-transform: none;
+    width: 60rem;
+}
+
+.story-container .gambar {
+    padding-bottom: 5rem;
+}
+
+.story-container .gambar .image img {
+    width: 95%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.story-container .gambar span {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+/* footer */
+.footer {
+    background-color: #fbc8dc;
+    width: 100%;
+    padding: 2rem 0;
+
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #fbc8dc;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .box-container .box {
+    flex: 1 1 35rem;
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #333;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    text-transform: none;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--candy-pink);
+    text-decoration: underline;
+}
+
+.footer .box-container .box .logos {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer .box-container .box .logos img {
+    width: 4rem;
+    height: auto;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span {
+    color: var(--candy-pink);
+    font-weight: bold;
+}
+
+/* media queries */
+@media (min-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 768px) and (max-width: 1024px) {
+    /* lirik */
+    .lirik-container .deskripsi p {
+        width: 60rem;
+    }
+
+    /* footer */
+    .footer .box-container {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+
+    /* lirik */
+    .lirik-container .lirik h3 {
+        font-size: 2rem;
+    }
+
+    .lirik-container .lirik p {
+        font-size: 1.2rem;
+    }
+
+    .lirik-container .deskripsi p {
+        font-size: 1.2rem;
+        width: 50rem;
+    }
+
+    .lirik-container .deskripsi span {
+        font-size: 1.2rem;
+    }
+
+    /* story */
+    .story-container .story h3 {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .story-container .story p {
+        font-size: 1.2rem;
+        width: 50rem;
+    }
+
+    .story-container .gambar span {
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    .footer .box-container {
+        margin-left: 2.8rem;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 40%;
+    }    
+}
